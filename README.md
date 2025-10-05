@@ -1,5 +1,5 @@
 # AI Water Quality Advisor
-An Ai powered web application that analyzes household water test results and provides safety assessments, possible issues, and treatment recommendations based on international water quality guidelines (WHO/EPA).
+An AI powered web application that analyzes household water test results and provides safety assessments, possible issues, and treatment recommendations based on international water quality guidelines (WHO/EPA).
 
 Built with AWS Cloud + AI to demonstrate cloud-native architecture, serverless design, and real-world AI integration.
 
@@ -9,9 +9,11 @@ Built with AWS Cloud + AI to demonstrate cloud-native architecture, serverless d
 
 * AI-Powered Analysis: Amazon Bedrock (Claude Sonnet 3.0) interprets results and generates recommendations.
 
-* Cloud-Native Architecture: Serverless backend using AWS Lambda + API Gateway.
+* Cloud-Native Architecture: Serverless backend using AWS Lambda + GraphQL API Gateway (through AWS AppSync).
 
 * Scalable Deployment: Frontend hosted on AWS Amplify.
+
+* CI/CD: AWS Amplify's integration with Github facilitates a CI/CD pipeline to push latest code changes to te hosted application.
 
 * Secure Access: AWS Cognito for user authentication and personal dashboards.
 
@@ -21,9 +23,9 @@ Built with AWS Cloud + AI to demonstrate cloud-native architecture, serverless d
 
 ```
 
-    [Frontend: React / Amplify]
+    [Frontend: React / Amplify] ←→ [Cognito]
         ↓
-   [API Gateway]
+   [AppSync] (GraphQL API)
         ↓
    [Lambda Functions] → [Amazon Bedrock (AI Model)]
         ↓
@@ -37,7 +39,7 @@ Built with AWS Cloud + AI to demonstrate cloud-native architecture, serverless d
 
 * Frontend: React (Amplify-React UI and Hosting)
 * Backend: AWS Lambda + API Gateway
-* AI Model: Amazon Bedrock (Anthropic Claude)
+* AI Model: Amazon Bedrock (Anthropic Claude Sonnet 3.0)
 * Authentication: AWS Cognito
 
 
@@ -58,6 +60,29 @@ Prerequisites:
 * A Github account
 
 Steps:
+
+1. Create new react application:
+
+```
+    npm create vite@latest ai-recipe-generator -- --template react-ts -y
+    cd ai-recipe-generator
+    npm install
+    npm run dev
+
+```
+
+2. Install Amplify packages
+
+```
+
+npm create amplify@latest -y   
+
+```
+
+3. Initialise Github repository and push code to Github.
+
+4. Deploy App with AWS Amplify.
+
 
 
 
