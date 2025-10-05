@@ -1,7 +1,8 @@
-# ai-water-quality-advisor
+# AI Water Quality Advisor
 An Ai powered web application that analyzes household water test results and provides safety assessments, possible issues, and treatment recommendations based on international water quality guidelines (WHO/EPA).
 
 Built with AWS Cloud + AI to demonstrate cloud-native architecture, serverless design, and real-world AI integration.
+
 
 # 🚀 Features
 * User-Friendly Web App: Enter water test values (pH, turbidity, hardness, nitrates, etc.) via a responsive form.
@@ -13,6 +14,8 @@ Built with AWS Cloud + AI to demonstrate cloud-native architecture, serverless d
 * Scalable Deployment: Frontend hosted on AWS Amplify.
 
 * Secure Access: AWS Cognito for user authentication and personal dashboards.
+
+
 
 # 🏗️ Architecture
 
@@ -28,6 +31,7 @@ Built with AWS Cloud + AI to demonstrate cloud-native architecture, serverless d
 
 
 ```
+
 
 # ⚙️ Tech Stack
 
